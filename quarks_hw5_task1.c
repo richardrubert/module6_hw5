@@ -12,7 +12,7 @@
  * =====================================================================================
  */
 #include <stdio.h>		/* For Standard I/O */
-
+#include <math.h>
 
 /* Function Prototypes */
 
@@ -20,6 +20,18 @@
 int main(void)
 {
 
+	float r1, r2, I;
+	printf("Enter the value for outer radius (r2):");
+	scanf("%f", &r2);
+	printf("enter the value for inner radius (r1):");
+	scanf("%f", &r1);
+
+	while(1)
+		{
+			I = (3.1415926/4) * (pow(r2,4) - pow(r1,4));  
+			printf("The second moment of inertia is %4.2f\n", I);
+			break;
+		}
 	return 0;
 }
 
